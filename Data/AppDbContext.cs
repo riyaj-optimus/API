@@ -41,7 +41,8 @@ namespace DbOperationWithEfCode.Data
         //here Books is teh name of the table  in the DB and Book is teh name of teh class corrosponding to Books
 
         public DbSet<Language> Languages { get; set; }
-        public DbSet<BookPrice> BooksPrices { get; set; }
+        public DbSet<BookPrice> BookPrices { get; set; }
         public DbSet<CurrencyType> CurrencyTypes { get; set; }
+     
     }
 }

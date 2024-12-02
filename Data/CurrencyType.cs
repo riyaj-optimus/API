@@ -7,6 +7,6 @@
 
         //public string Desc { get; set; }
 
-        public BookPrice BookPrices { get; set; }//1 -M relationship from  CurrencyType :BookPrices
+        public BookPrice? BookPrices { get; set; }//1 -1 relationship from  CurrencyType :BookPrices
     }
 }

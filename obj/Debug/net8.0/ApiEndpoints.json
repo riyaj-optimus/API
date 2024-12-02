@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "DbOperationWithEfCode.Controllers.BookPriceController",
+    "Method": "GetAllBookPrice",
+    "RelativePath": "api/BookPrice",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.BookPriceController",
+    "Method": "GetBookPriceByID",
+    "RelativePath": "api/BookPrice/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DbOperationWithEfCode.Controllers.BooksController",
     "Method": "GetAllBooks",
     "RelativePath": "api/Books",
@@ -10,9 +36,172 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DbOperationWithEfCode.Controllers.BooksController",
+    "Method": "GetBookByIdAsync",
+    "RelativePath": "api/Books/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.BooksController",
+    "Method": "GetBookByNameAsync",
+    "RelativePath": "api/Books/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "desc",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.BooksController",
+    "Method": "GetBookByAsync",
+    "RelativePath": "api/Books/{name}/name",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.BooksController",
+    "Method": "GetdetailsUsingId",
+    "RelativePath": "api/Books/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.BooksController",
+    "Method": "GetAllList",
+    "RelativePath": "api/Books/Details /all",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.BooksController",
+    "Method": "GetSimilar",
+    "RelativePath": "api/Books/similar/{details}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "details",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DbOperationWithEfCode.Controllers.CurrencyController",
     "Method": "GetAllCurrencies",
     "RelativePath": "api/Currency",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.CurrencyController",
+    "Method": "GetCurrencyTypeById",
+    "RelativePath": "api/Currency/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.CurrencyController",
+    "Method": "AddingCurrencyTypes",
+    "RelativePath": "api/Currency/Adding/data",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ct",
+        "Type": "DbOperationWithEfCode.Data.CurrencyType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.CurrencyController",
+    "Method": "PuttingAllTheRec",
+    "RelativePath": "api/Currency/multi/rec/insertion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lili",
+        "Type": "System.Collections.Generic.List\u00601[[DbOperationWithEfCode.Data.CurrencyType, DbOperationWithEfCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.CurrencyController",
+    "Method": "GetSpecificCols",
+    "RelativePath": "api/Currency/specific_cols",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.LanguageController",
+    "Method": "GetAllLanguage",
+    "RelativePath": "api/Language",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
