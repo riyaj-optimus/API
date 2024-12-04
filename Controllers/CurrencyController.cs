@@ -66,6 +66,61 @@ namespace DbOperationWithEfCode.Controllers
             await _appDbContext.SaveChangesAsync();
             return Ok(lili);
         }
-        
+
+        //updating the record
+
+        [HttpPut("{bkId}")]
+        public async Task<IActionResult> UpdatingCurrencyTypes([FromRoute] int bkId, [FromQuery] CurrencyType ct)
+        {
+            var currData = _appDbContext.CurrencyTypes.FirstOrDefault(x => x.Id == bkId);
+            if(currData == null)
+            {
+                return NotFound();
+
+            }
+            currData.Currency= ct.Currency;
+
+            await _appDbContext.SaveChangesAsync();
+            return Ok(ct);
+
+
+        }
+
+        //updating a recors in 1 hit
+        [HttpPut("")]
+        public async Task<IActionResult> UpdatingCurrencyTypesWithSingleQuery([FromBody] CurrencyType ct)
+        {
+            _appDbContext.CurrencyTypes.Update(ct);
+            await _appDbContext.SaveChangesAsync();
+            return Ok(ct);
+        }
+
+        //updating a recors in 1 hit c
+        [HttpPut("detials")]
+        public async Task<IActionResult> UpdatingCurrencyTypesWithSingleQueryMeth([FromBody] CurrencyType ct)
+        {
+            _appDbContext.Entry(ct).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            await _appDbContext.SaveChangesAsync();
+            return Ok(ct);
+        }
+
+        //updating multiple records in a table in 1 go
+        [HttpPut("bulk/Updating")]
+        public async Task<IActionResult> UpdatingInBulk()
+        {
+            var curr = _appDbContext.CurrencyTypes.ToList();
+            foreach(var i in curr)
+            {
+                i.Currency = "Updated";
+                //the drawback of this method is : this will hit the DB n no. of times
+
+            }
+            await _appDbContext.SaveChangesAsync();
+            return Ok(curr);
+        }
+
+        //updating multiple  records in 1 go without iterating 
+
+
     }
 }

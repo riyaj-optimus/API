@@ -70,7 +70,21 @@ namespace DbOperationWithEfCode.Controllers
             return Ok(re);
         }
 
-        
+        //inserting records in multiple tables at once.
+        [HttpPost("Deleting/The/records")]
+       public async Task<IActionResult> InsertingRecs([FromBody] Book model)
+        {
+
+            var data = new Author() { 
+                Name="Harsh",
+                Email="pooo@gmail.com"
+            };
+            model.Author = data;
+            _appDbContext.Books.Add(model);
+            await _appDbContext.SaveChangesAsync();
+            return Ok(model);
+        }
+       
 
     }
 }

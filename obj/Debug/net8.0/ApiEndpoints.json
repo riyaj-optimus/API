@@ -100,6 +100,22 @@
   },
   {
     "ContainingType": "DbOperationWithEfCode.Controllers.BooksController",
+    "Method": "InsertingRecs",
+    "RelativePath": "api/Books/Deleting/The/records",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "DbOperationWithEfCode.Data.Book",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.BooksController",
     "Method": "GetAllList",
     "RelativePath": "api/Books/Details /all",
     "HttpMethod": "POST",
@@ -142,6 +158,273 @@
   },
   {
     "ContainingType": "DbOperationWithEfCode.Controllers.CurrencyController",
+    "Method": "UpdatingCurrencyTypesWithSingleQuery",
+    "RelativePath": "api/Currency",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ct",
+        "Type": "DbOperationWithEfCode.Data.CurrencyType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.CurrencyController",
+    "Method": "UpdatingCurrencyTypes",
+    "RelativePath": "api/Currency/{bkId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bkId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Currency",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.BookId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Amount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.NoOfPages",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.CreatedOn",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.LanguageId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.AuthorId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.BookPrices",
+        "Type": "System.Collections.Generic.ICollection\u00601[[DbOperationWithEfCode.Data.BookPrice, DbOperationWithEfCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.Language.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.Language.Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.Language.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.Language.Books",
+        "Type": "System.Collections.Generic.ICollection\u00601[[DbOperationWithEfCode.Data.Book, DbOperationWithEfCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.Author.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.Author.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.Author.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.Book.country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.Currency",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.BookId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Amount",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.CurrencyTypeId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.NoOfPages",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.CreatedOn",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.LanguageId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.AuthorId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.BookPrices",
+        "Type": "System.Collections.Generic.ICollection\u00601[[DbOperationWithEfCode.Data.BookPrice, DbOperationWithEfCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.Language.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.Language.Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.Language.Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.Language.Books",
+        "Type": "System.Collections.Generic.ICollection\u00601[[DbOperationWithEfCode.Data.Book, DbOperationWithEfCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.Author.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.Author.Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.Author.Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.Book.country",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrices.CurrencyType.BookPrices.CurrencyType",
+        "Type": "DbOperationWithEfCode.Data.CurrencyType",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.CurrencyController",
     "Method": "GetCurrencyTypeById",
     "RelativePath": "api/Currency/{id}",
     "HttpMethod": "GET",
@@ -161,6 +444,32 @@
     "Method": "AddingCurrencyTypes",
     "RelativePath": "api/Currency/Adding/data",
     "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ct",
+        "Type": "DbOperationWithEfCode.Data.CurrencyType",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.CurrencyController",
+    "Method": "UpdatingInBulk",
+    "RelativePath": "api/Currency/bulk/Updating",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.CurrencyController",
+    "Method": "UpdatingCurrencyTypesWithSingleQueryMeth",
+    "RelativePath": "api/Currency/detials",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -203,6 +512,68 @@
     "Method": "GetAllLanguage",
     "RelativePath": "api/Language",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.LanguageController",
+    "Method": "deletedFromLanguages",
+    "RelativePath": "api/Language/{bid}/Deleted",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.LanguageController",
+    "Method": "DeleteRec",
+    "RelativePath": "api/Language/{langId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "langId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.LanguageController",
+    "Method": "UpdateRec",
+    "RelativePath": "api/Language/Bulk",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.LanguageController",
+    "Method": "bulkDeletion",
+    "RelativePath": "api/Language/deletion/Bulk",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.LanguageController",
+    "Method": "bulkDeletiona",
+    "RelativePath": "api/Language/deletion/Bulk/a",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [],

@@ -9,7 +9,7 @@ internal class Program
 
         builder.Services.AddDbContext<AppDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("AppDB"))
-        );
+        ).AddLogging(Console.WriteLine);//this is added to know the sql commands at runctime.
         //the DbConetxt class we have added is : AppDbContext
 
         // Add services to the container.

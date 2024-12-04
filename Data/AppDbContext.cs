@@ -43,6 +43,8 @@ namespace DbOperationWithEfCode.Data
         public DbSet<Language> Languages { get; set; }
         public DbSet<BookPrice> BookPrices { get; set; }
         public DbSet<CurrencyType> CurrencyTypes { get; set; }
+
+        public DbSet<Author> AuthorS { get; set; }
      
     }
 }

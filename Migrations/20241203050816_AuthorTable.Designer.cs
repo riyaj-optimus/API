@@ -4,6 +4,7 @@ using DbOperationWithEfCode.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DbOperationWithEfCode.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241203050816_AuthorTable")]
+    partial class AuthorTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,10 +67,10 @@ namespace DbOperationWithEfCode.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("LanguageId")
+                    b.Property<int>("LanguageId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("NoOfPages")
+                    b.Property<int>("NoOfPages")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -75,6 +78,7 @@ namespace DbOperationWithEfCode.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("country")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -92,6 +96,7 @@ namespace DbOperationWithEfCode.Migrations
                             Description = "Rom",
                             IsActive = true,
                             LanguageId = 3,
+                            NoOfPages = 0,
                             Title = "It Ends With Us",
                             country = "India"
                         },
@@ -101,6 +106,7 @@ namespace DbOperationWithEfCode.Migrations
                             Description = "Relationships",
                             IsActive = false,
                             LanguageId = 2,
+                            NoOfPages = 0,
                             Title = "Rememberence of him",
                             country = "Spain"
                         },
@@ -110,6 +116,7 @@ namespace DbOperationWithEfCode.Migrations
                             Description = "The Pakistani gurl",
                             IsActive = true,
                             LanguageId = 4,
+                            NoOfPages = 0,
                             Title = "Malala",
                             country = "Paris"
                         },
@@ -119,6 +126,7 @@ namespace DbOperationWithEfCode.Migrations
                             Description = "about a group of shephered",
                             IsActive = true,
                             LanguageId = 1,
+                            NoOfPages = 0,
                             Title = "The Alchemist",
                             country = "HongKong"
                         });
@@ -275,7 +283,9 @@ namespace DbOperationWithEfCode.Migrations
 
                     b.HasOne("DbOperationWithEfCode.Data.Language", "Language")
                         .WithMany("Books")
-                        .HasForeignKey("LanguageId");
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Author");
 
