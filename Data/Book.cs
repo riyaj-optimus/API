@@ -17,7 +17,7 @@
         public int? AuthorId { get; set; }
 
         public ICollection<BookPrice>? BookPrices { get; set; }
-        public Language? Language { get; set; }
+        public Language? Language { get; set; }//if we comment this ot , we can never work with fluent API
         //created  to give reference to the LangId col (of Books table ) : Language table
         public Author? Author { get; set; }
         public string? country {  get; set; }

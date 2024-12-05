@@ -19,8 +19,19 @@ namespace DbOperationWithEfCode.Controllers
 
         public async Task<IActionResult> GetAllLanguage()
         {
-            var res = await _appDbContext.Languages.ToListAsync();
-            return Ok(res);
+            var lang= await _appDbContext.Languages.FirstAsync();
+            await _appDbContext.Entry(lang).Collection(x=>x.Books).Query().LoadAsync();
+            //var res = await _appDbContext.Languages.ToListAsync();
+           
+            return Ok(lang);
+        }
+        [HttpGet("uhm")]
+        public async Task<IActionResult> GetAllLanguages()
+        {
+            var domainList = await _appDbContext.Languages.Include(x => x.Books).ThenInclude(x => x.Author).ToListAsync();
+            //var res = await _appDbContext.Languages.ToListAsync();
+
+            return Ok(domainList);
         }
 
         //updating records in bulk : hitting the DB in once

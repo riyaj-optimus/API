@@ -12,9 +12,15 @@ namespace DbOperationWithEfCode.Controllers
         private readonly AppDbContext _appDbContext=appDbContext;
         
         [HttpGet("")]
+        //getting data of 1 table using another
         public async Task<IActionResult> GetAllBooks()
         {
-            var res = await _appDbContext.Books.ToListAsync();
+            var res = await _appDbContext.Books.Select(x=> new
+            {
+                Id=x.Id,
+                Title=x.Title,
+                Author=x.Author.Name!=null ? x.Author.Name : "NA"
+            }).ToListAsync();
             return Ok(res);
         }
 

@@ -578,5 +578,15 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DbOperationWithEfCode.Controllers.LanguageController",
+    "Method": "GetAllLanguages",
+    "RelativePath": "api/Language/uhm",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]
