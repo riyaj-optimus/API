@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "CPiM+9s8tTqaf1MTjU5jX1lA853WrQvHfZr/+UVH2Ic=",
+  "Source": "JWTAuthServer",
+  "BasePath": "_content/JWTAuthServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
